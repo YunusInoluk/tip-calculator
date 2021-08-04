@@ -28,7 +28,6 @@ body {
   font-size: var(--fs-mid);
   background-color: var(--bg-color);
   @media (min-width: 920px) {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
