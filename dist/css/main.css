@@ -34,6 +34,7 @@ body {
 
 @media (min-width: 920px) {
   body {
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
