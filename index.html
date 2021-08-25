@@ -29,7 +29,7 @@
           <h3 class="title">Select Tip %</h3>
           <a href="#" class="btn">5%</a>
           <a href="#" class="btn">10%</a>
-          <a href="#" class="btn">15%</a>
+          <a href="#" class="btn active">15%</a>
           <a href="#" class="btn">25%</a>
           <a href="#" class="btn">50%</a>
           <input
@@ -42,7 +42,12 @@
         <div class="num-people">
           <h3 class="title">Number of People</h3>
           <div class="input">
-            <input type="text" name="num-people" id="num-people" />
+            <input
+              type="text"
+              name="num-people"
+              id="num-people"
+              placeholder="1"
+            />
             <img src="images/icon-person.svg" alt="person" class="icon" />
           </div>
         </div>
@@ -54,18 +59,19 @@
               >Tip Amount<br />
               <p class="person">/ person</p>
             </span>
-            <span id="tip-amount" class="result-number">$4.27</span>
+            <span id="tip-amount" class="result-number">$0.00</span>
           </div>
           <div class="result-list">
             <span
               >Total<br />
               <p class="person">/ person</p>
             </span>
-            <span id="total" class="result-number">32.79</span>
+            <span id="total" class="result-number">$0.00</span>
           </div>
         </div>
-        <a href="#" class="btn">RESET</a>
+        <a href="#" class="btn" id="reset">RESET</a>
       </div>
     </div>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>

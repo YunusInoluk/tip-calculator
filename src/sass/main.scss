@@ -14,14 +14,17 @@
 *,
 *::after,
 *::before {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 header {
   width: 100%;
   padding: 2rem 0;
   text-align: center;
+}
+.active {
+  background-color: var(--secondary-color) !important;
 }
 body {
   font-family: "Space Mono", monospace;
