@@ -21,7 +21,13 @@
         <div class="bill">
           <h3 class="title">Bill</h3>
           <div class="input">
-            <input type="text" name="bill" id="bill" />
+            <input
+              type="number"
+              name="bill"
+              id="bill"
+              autocomplete="off"
+              max-length="120"
+            />
             <img src="images/icon-dollar.svg" alt="dollar" class="icon" />
           </div>
         </div>
@@ -33,10 +39,11 @@
           <a href="#" class="btn">25%</a>
           <a href="#" class="btn">50%</a>
           <input
-            type="text"
+            type="number"
             name="custom-tip"
             id="custom-tip"
             placeholder="Custom"
+            autocomplete="off"
           />
         </div>
         <div class="num-people">
@@ -47,6 +54,7 @@
               name="num-people"
               id="num-people"
               placeholder="1"
+              autocomplete="off"
             />
             <img src="images/icon-person.svg" alt="person" class="icon" />
           </div>

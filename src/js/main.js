@@ -5,19 +5,28 @@ const numPeople = document.getElementById("num-people");
 const tipAmount = document.getElementById("tip-amount");
 const total = document.getElementById("total");
 const resetBtn = document.getElementById("reset");
+const locale = window.navigator.userLanguage || window.navigator.language;
 
 let bill = 0;
 let tipPercent = 0.15;
 let numOfPeople = 1;
 
+function intNumber(locale, value) {
+  const localValue = Intl.NumberFormat(locale).format(value);
+  return localValue;
+}
+
 function calcTip() {
   bill = billInput.value;
   const tip = (bill * tipPercent) / numOfPeople;
   const totalTip = (bill * (tipPercent + 1)) / numOfPeople;
-  tipAmount.innerHTML = "$" + tip.toFixed(2);
-  total.innerHTML = "$" + totalTip.toFixed(2);
+  tipAmount.innerHTML = intNumber(locale, tip);
+  total.innerHTML = intNumber(locale, totalTip);
 }
+
 function inputHandler() {
+  const intValue = intNumber(locale, this.value);
+  this.value = intValue;
   calcTip();
 }
 function customInputHandler() {
@@ -53,6 +62,7 @@ function reset() {
   billInput.value = null;
   numPeople.value = null;
   customTip.value = null;
+  tipBtn[2].classList.add("active");
 }
 
 billInput.addEventListener("input", inputHandler);

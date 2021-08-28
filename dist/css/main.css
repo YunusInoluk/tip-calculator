@@ -34,6 +34,8 @@ body {
   font-family: "Space Mono", monospace;
   font-size: var(--fs-mid);
   background-color: var(--bg-color);
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
 }
 
 @media (min-width: 920px) {
@@ -73,6 +75,16 @@ body input {
   font-weight: 700;
   color: var(--primary-color);
   text-align: right;
+}
+
+body input::-webkit-outer-spin-button,
+body input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 body input:focus {
